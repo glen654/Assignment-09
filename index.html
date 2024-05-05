@@ -26,50 +26,7 @@
 </main>
 <audio id="audio" src="assests/audio/audio.mp3"></audio>
 
-
-
-    <script src="assests/lib/jquery-3.7.1.min.js"></script>
-    <script>
-        var currentLightIndex = 0;
-        var max_light_count = 5;
-        var move = "RIGHT";
-        var myInterval = null;
-        function updateLightPanel(){
-            $(".light").removeClass("light_on");
-            $(".light").removeClass("light_on2");
-
-            $(".light").eq(currentLightIndex).addClass("light_on");
-
-            if(move === "RIGHT"){
-                if(currentLightIndex!==0){
-                    $(".light").eq(currentLightIndex-1).addClass("light_on2");
-                }
-
-                ++currentLightIndex;
-                if(currentLightIndex > max_light_count - 2){
-                    move = "LEFT";
-                }
-            }else{
-                $(".light").eq(currentLightIndex+1).addClass("light_on2");
-                --currentLightIndex;
-
-                if(currentLightIndex === 0){
-                    move = "RIGHT";
-                }
-            }
-
-        }
-
-        $("#btn-start").on('click',() =>{
-            myInterval = setInterval(updateLightPanel,100);
-            $("#audio")[0].play();
-        });
-
-        $("#btn-stop").on('click',() =>{
-            clearInterval(myInterval);
-            $("#audio")[0].pause();
-        });
-
-    </script>
+<script src="assests/lib/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
