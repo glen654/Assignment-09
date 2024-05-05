@@ -1,45 +1,51 @@
-section{
-    position: relative;
+body{
+    background-color: black;
 }
 
-section>div{
-    display: flex;
-    justify-content: center;
-    margin-top: 300px;
-}
-
-section>div>div{
-    width: 200px;
-    height: 100px;
-    border: 2px solid black;
-}
-
-#btn-start{
-    width: 100px;
-    height: 50px;
+main {
+    width: fit-content;
+    height: fit-content;
     position: absolute;
-    top: 150px;
-    left: 830px;
-}
 
-#btn-stop{
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 176px;
-    right: 0;
-    left: 160px;
+    top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
 }
 
-.light_on{
-    background-color: red;
-    box-shadow: 0 0 30px red;
+#light-panel {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
 }
 
-.light_on2{
-    background-color: red;
-    box-shadow: 0 0 30px red;
-    opacity: 1;
+#light-panel>div{
+    width: 200px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid darkred;
+}
+
+#btn-panel {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.light {
+    width: 100px;
+    aspect-ratio: 2/1;
+    border: 2px solid black;
+}
+
+
+.light_on {
+    background: red;
+    box-shadow: 0px 0px 20px red;
+}
+.light_on2 {
+    background: hotpink;
+    box-shadow: 0px 0px 20px hotpink;
 }
